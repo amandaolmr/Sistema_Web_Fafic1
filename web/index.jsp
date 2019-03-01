@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 15/02/2019, 21:22:54
-    Author     : Amanda Miranda
+    Author     : Amanda Miranda e Natanael Luiz
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
