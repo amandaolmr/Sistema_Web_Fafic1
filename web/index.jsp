@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Programaçao Para Internet</title>
+        <title>Programaçao Para Internet- Amanda</title>
     </head>
     <body>
         <form action="oi" method="post">
