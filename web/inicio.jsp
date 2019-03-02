@@ -46,9 +46,8 @@
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cadastros <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="CadastroDiretor.jsp" target="_blank">Fazer Cadastro do Cordenador</a></li>
-                                <li><a href="#">Fazer Cadastro de Professor</a></li>
-                                <li><a href="#">Fazer Cadastro de Aluno</a></li>
+                                <li><a href="CadastroDiretor.jsp" target="_blank">Fazer Cadastro de Usuário</a></li>
+                                
                             </ul>
                         </li>
                         <li><a href="#">Portal Acadêmico</a></li>
