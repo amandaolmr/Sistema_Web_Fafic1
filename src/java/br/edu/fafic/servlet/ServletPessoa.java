@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Amanda Miranda
  */
 @WebServlet("/cadPessoa")
-public class ServletLogin extends HttpServlet {
+public class ServletPessoa extends HttpServlet {
 
     
 
