@@ -47,6 +47,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cadastros <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="CadastroDiretor.jsp" target="_blank">Fazer Cadastro de Usuário</a></li>
+                                <li><a href="CadastroDiretor.jsp" target="_blank">Lista de Usuários</a></li>
                                 
                             </ul>
                         </li>
@@ -54,8 +55,8 @@
                         <li><a href="#">Fale Conosco</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.jsp"><span class="glyphicon glyphicon-user"></span> Sair</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="index.jsp"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sair</a></li>
                     </ul>
                 </div>
             </div>
