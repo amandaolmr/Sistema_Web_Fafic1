@@ -62,7 +62,7 @@
             </div>
         </nav>
 
-        <form name="cad" action="cadLogin" method="post">
+        <form name="cad" action="cadPessoa" method="post">
             <div class="form-group" style="width:30%;">
                 <label for="text">Nome</label>
                 <input class="form-control" type="text" name="nome"/>

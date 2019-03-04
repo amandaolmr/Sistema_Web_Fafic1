@@ -16,23 +16,37 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
         <link rel="stylesheet" type="text/css" href="css/styleLogin.css">
+
+        <script  type="text/javascript">
+            function validaForm() {
+                if (document.cad.email.value === "") {
+                    alert("O campo nome é obrigatório!");
+                }
+                 if(document.cad.senha.value === ""){
+                    alert("O campo senha é obrigatório!");
+                }
+            }
+            
+
+        </script>
+
     </head>
     <body>
-        
+
         <div class="modal-dialog text-center">
             <div class="col-sm-9 main-section">
                 <div class="modal-content">
                     <div class="col-12 user-img">
                         <img src="imagens/face.png">
                     </div>
-                    
+
                     <div class="cal-12 form-input">
-                        <form>
+                        <form name="cad" action="log" method="post">
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Digite seu E-mail"> 
+                                <input type="email" name="email" class="form-control" placeholder="Digite seu E-mail"> 
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Digite sua Senha"> 
+                                <input type="password" name="senha" class="form-control" placeholder="Digite sua Senha"> 
                             </div>
                             <button type="submit" class="btn btn-success">Entrar</button> 
                         </form>
@@ -43,6 +57,6 @@
                 </div>
             </div>
         </div>
-       
+
     </body>
 </html>
