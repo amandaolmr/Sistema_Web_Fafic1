@@ -32,7 +32,7 @@ public class PessoaDAO {
             ps.executeUpdate();
             ps.close();
             con.close();
-
+            
         } catch (SQLException ex) {
             Logger.getLogger(PessoaDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -126,6 +126,29 @@ public class PessoaDAO {
         }
        
         
+    }
+    
+      public Pessoa autenticacao(String email, String senha){
+        Pessoa pessoa = null;
+        String sql = "select * from pessoa where email = ? and senha = ?";
+        PreparedStatement ps;
+        try {
+            ps = con.prepareStatement(sql);
+       
+        ps.setString(1, email);
+        ps.setString(2, senha);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()){
+            pessoa = new Pessoa(rs.getLong("id"),rs.getString("perfil"), rs.getString("email"), rs.getString("senha"));
+        }
+        
+        ps.close();
+        con.close();
+        
+         } catch (SQLException ex) {
+            Logger.getLogger(PessoaDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return pessoa;
     }
 
 }

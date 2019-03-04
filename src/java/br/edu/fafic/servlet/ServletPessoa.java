@@ -39,21 +39,23 @@ public class ServletPessoa extends HttpServlet {
         if (type.equalsIgnoreCase("cadastrar")) {
              pessoa = new Pessoa(nome, cpf, perfil, email, senha, telefone);
             dao.cadastraPessoa(pessoa);
+            resp.sendRedirect("diretor/cadUsuario.jsp");
 
         }else if(type.equalsIgnoreCase("editar")){
             Long id = Long.valueOf(req.getParameter("id"));
             pessoa = new Pessoa(id, nome, cpf, email, perfil,senha, telefone);
             dao.updatePessoa(pessoa);
+            resp.sendRedirect("diretor/listaUsuario.jsp");
             
         }else if(type.equalsIgnoreCase("excluir")){
             //fazer o dao de excluir
             Long id = Long.valueOf(req.getParameter("id"));
             dao.excluirPessoa(id);
-            
+            resp.sendRedirect("diretor/listaUsuario.jsp");
         }
        // RequestDispatcher rs = req.getRequestDispatcher("inicio.jsp");
         //rs.forward(req, resp);
-        resp.sendRedirect("diretor/index.jsp");//Redirecionando para a pagina de inicio
+        //resp.sendRedirect("diretor/index.jsp");//Redirecionando para a pagina de inicio
 
     }
 

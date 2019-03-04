@@ -19,11 +19,10 @@
 
         <script  type="text/javascript">
             function validaForm() {
-                if (document.cad.email.value === "") {
-                    alert("O campo nome é obrigatório!");
-                }
-                 if(document.cad.senha.value === ""){
-                    alert("O campo senha é obrigatório!");
+                if (document.cad.email.value === "" && document.cad.senha.value === "") {
+                    alert("Os campos são obrigatorio!");
+                }else{
+                    alert("Sucesso!")
                 }
             }
             

@@ -1,7 +1,7 @@
 <%-- 
     Document   : inicio
-    Created on : 19/02/2019, 19:44:53
-    Author     : Amanda Miranda
+    Created on : 04/03/2019, 10:05:40
+    Author     : Natanael Luiz
 --%>
 
 <%@page import="br.edu.fafic.dao.PessoaDAO"%>
@@ -17,7 +17,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <title>Página do Diretor</title>
+        
+        <!-- LINKs CSS -->
+        <link rel="stylesheet" href="../css/cssCadUsuario.css">
+        <title>Cadastrar Usuario</title>
 
     </head>
     <body>
@@ -39,6 +42,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="cadUsuario.jsp">Fazer Cadastro de Usuário</a></li>
                                 <li><a href="listaUsuario.jsp">Lista de Usuários</a></li>
+                                
                             </ul>
                         </li>
                         <li><a href="#">Portal Acadêmico</a></li>
@@ -51,5 +55,46 @@
                 </div>
             </div>
         </nav>
+
+        <div class="form-css">
+            
+            <h1>CADASTRAR USUARIO</h1>
+            
+            <form name="cad" action="../cadPessoa" method="post">
+                <div class="form-group">
+                    <label for="text">Nome</label>
+                    <input class="form-control" required="required" type="text" name="nome"/>
+                </div>
+                <div class="form-group">
+                    <label for="text">CPF</label>
+                    <input class="form-control" required="required" type="text" name="cpf"/>
+                </div>
+                <div class="form-group">
+                    <label for="text">Perfil</label>
+                    <select class="form-control" name="perfil">
+                        <option value="diretor">Diretor</option>
+                        <option value="professor">Professor</option>
+                        <option value="aluno">Aluno</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="text">E-mail</label>
+                    <input class="form-control" required="required" type="email" name="email"/>
+                </div>
+                <div class="form-group">
+                    <label for="text">Senha</label>
+                    <input class="form-control" required="required" type="password" name="senha"/>
+                </div>
+                <div class="form-group">
+                    <label for="text">Telefone</label>
+                    <input class="form-control" required="required" type="tel" name="telefone" pattern="[0-9]+$"/>
+                </div>
+
+                <div class="button-cad" >
+                    <input type="hidden" value="Cadastrar" name="param"/><br>
+                    <input type="submit" value="Cadastrar"/><br>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

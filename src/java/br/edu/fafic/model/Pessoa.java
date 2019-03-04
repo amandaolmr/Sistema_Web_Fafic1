@@ -35,6 +35,15 @@ public class Pessoa {
         this.telefone = telefone;
     }
 
+    public Pessoa(long id, String perfil, String email, String senha) {
+        this.id = id;
+        this.perfil = perfil;
+        this.email = email;
+        this.senha = senha;
+    }
+    
+    
+
    
     public long getId() {
         return id;

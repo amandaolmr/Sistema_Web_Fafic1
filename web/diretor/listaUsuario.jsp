@@ -19,6 +19,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <title>Página do Diretor</title>
 
+        <script type="text/javascript">
+            function excluir(id, nome) {
+                if (window.confirm("Deseja realmente excluir o usuário " + nome + " ?")) {
+                    location.href = "../cadPessoa?id=" + id + "&param=excluir";
+                }
+            }
+        </script>
     </head>
     <body>
         <nav class="navbar navbar-inverse">
@@ -39,6 +46,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="cadUsuario.jsp">Fazer Cadastro de Usuário</a></li>
                                 <li><a href="listaUsuario.jsp">Lista de Usuários</a></li>
+                                
                             </ul>
                         </li>
                         <li><a href="#">Portal Acadêmico</a></li>
@@ -51,5 +59,43 @@
                 </div>
             </div>
         </nav>
+
+
+        <%
+            PessoaDAO dao = new PessoaDAO();
+            List<Pessoa> logins = dao.getAll();
+
+        %>
+        <b>Lista de Pessoas</b><br><br>
+        <table border="1">
+            <tr>
+                <td style="text-align: center;">Id </td>
+                <td style = "text-align: center;">Nome </td>
+                <td style = "text-align: center;">Cpf</td>
+                <td style = "text-align: center;">Perfil </td>
+                <td style = "text-align: center;">E-mail </td>
+                <td style = "text-align: center;">Senha </td>
+                <td style = "text-align: center;">Telefone </td>
+
+
+            </tr>
+            <%for (Pessoa login : logins) {%>
+            <tr>
+                <td><%=login.getId()%> </td>
+                <td><%=login.getNome()%> </td>
+                <td><%=login.getCpf()%> </td>
+                <td><%=login.getPerfil()%> </td>
+                <td><%=login.getEmail()%> </td>
+                <td><%=login.getSenha()%> </td>
+                <td><%=login.getTelefone()%> </td>
+
+
+                <td><a href="edit.jsp?id=<%=login.getId()%>"><img src="../imagens/edit.png"></a> </td>
+                <td><a href="javascript://" onclick="excluir(<%=login.getId()%>, '<%=login.getNome()%>')"><img src="../imagens/excluir.png"></a> </td>
+
+            </tr>
+            <%}%>
+        </table>
+
     </body>
 </html>

@@ -10,6 +10,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>/diretor/index.jsp</welcome-file><!--Defininco pagina Inicial do projeto-->
+        <welcome-file>telaLogin.jsp</welcome-file><!--Defininco pagina Inicial do projeto-->
     </welcome-file-list>
 </web-app>
