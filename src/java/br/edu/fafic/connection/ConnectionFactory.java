@@ -31,7 +31,7 @@ public class ConnectionFactory {
         Connection con = null;
         try {
             Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/usuario","postgres","123");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/sistema","postgres","123");
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);

@@ -53,7 +53,7 @@ public class ServletLogin extends HttpServlet {
         }
        // RequestDispatcher rs = req.getRequestDispatcher("inicio.jsp");
         //rs.forward(req, resp);
-        resp.sendRedirect("inicio.jsp");//Redirecionando para a pagina de inicio
+        resp.sendRedirect("diretor/index.jsp");//Redirecionando para a pagina de inicio
 
     }
 
